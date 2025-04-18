@@ -7,8 +7,9 @@ import Layout from '../../../components/layout/Layout';
 import CryptoIcon from '../../../components/common/CryptoIcon';
 import Button from '../../../components/ui/Button';
 import { formatCurrency, formatNumber } from '../../../lib/utils';
-import { ArrowRight, Wallet, RefreshCw, CreditCard, DollarSign, AlertCircle, Clock, TrendingUp } from 'lucide-react';
+import { ArrowRight, Wallet, RefreshCw, CreditCard, DollarSign, AlertCircle, Clock } from 'lucide-react';
 import { addTransaction } from '../../../lib/firebaseService';
+import { auth } from '../../../lib/firebase';
 import './buy-crypto.scss';
 
 interface CryptoCurrency {
@@ -33,6 +34,7 @@ interface RecentTransaction {
   fiatCurrency: string;
   timestamp: Date;
   status: 'completed' | 'pending' | 'failed';
+  type: 'buy' | 'sell';
 }
 
 const BuyCryptoPage: React.FC = () => {
@@ -82,7 +84,8 @@ const BuyCryptoPage: React.FC = () => {
         fiatAmount: 1350.45,
         fiatCurrency: 'USD',
         timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000),
-        status: 'completed'
+        status: 'completed',
+        type: 'buy'
       },
       {
         id: '2',
@@ -91,7 +94,8 @@ const BuyCryptoPage: React.FC = () => {
         fiatAmount: 3685.17,
         fiatCurrency: 'USD',
         timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),
-        status: 'completed'
+        status: 'completed',
+        type: 'buy'
       },
       {
         id: '3',
@@ -100,7 +104,8 @@ const BuyCryptoPage: React.FC = () => {
         fiatAmount: 423.14,
         fiatCurrency: 'USD',
         timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
-        status: 'completed'
+        status: 'completed',
+        type: 'buy'
       }
     ];
 
@@ -201,7 +206,8 @@ const BuyCryptoPage: React.FC = () => {
         fiatAmount: parseFloat(amount),
         fiatCurrency: 'USD',
         timestamp: new Date(),
-        status: 'completed'
+        status: 'completed',
+        type: 'buy'
       };
 
       setRecentTransactions([newTransaction, ...recentTransactions]);
@@ -216,16 +222,20 @@ const BuyCryptoPage: React.FC = () => {
       setSuccess(true);
 
       try {
+
         if (typeof addTransaction === 'function') {
-          await addTransaction({
-            type: 'buy',
-            cryptoSymbol: selectedCrypto,
-            cryptoAmount: parseFloat(cryptoAmount),
-            fiatAmount: parseFloat(amount),
-            fiatCurrency: 'USD',
-            paymentMethod: paymentMethod,
-            timestamp: new Date()
-          });
+          const user = auth.currentUser;
+          if (user) {
+            await addTransaction({
+              userId: user.uid,
+              type: 'buy',
+              symbol: selectedCrypto,
+              amount: parseFloat(cryptoAmount),
+              price: parseFloat(amount)
+            });
+          } else {
+            console.error('User not authenticated');
+          }
         }
       } catch (err) {
         console.error('Firebase transaction save error:', err);

@@ -34,7 +34,7 @@ const UserProfile: React.FC = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const userProfile = await getCurrentUserProfile();
+        const userProfile: { id: string; displayName?: string; email?: string } = await getCurrentUserProfile();
         if (userProfile && userProfile.displayName && userProfile.email) {
           setUser({
             displayName: userProfile.displayName,
