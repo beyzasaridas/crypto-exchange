@@ -160,17 +160,13 @@ const Header: React.FC = () => {
             </div>
             {user ? (
               <div className="header__user">
-                <div className="header__user-info">
-                  <div className="header__user-name">{user?.displayName || 'User'}</div>
-                  <div className="header__user-email">{user?.email}</div>
-                </div>
                 <button
                   className="header__user-button"
                   onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                 >
                   <img
                     className="header__user-avatar"
-                    src={`https://ui-avatars.com/api/?name=${user.displayName || 'User'}&background=random`}
+                    src="/images/avatar.jpg"
                     alt="User avatar"
                   />
                   <svg className="header__user-dropdown" viewBox="0 0 24 24">
@@ -265,10 +261,6 @@ const Header: React.FC = () => {
                   src={`https://ui-avatars.com/api/?name=${user.displayName || 'User'}&background=random`}
                   alt="User avatar"
                 />
-                <div>
-                  <div className="header__mobile-user-name">{user?.displayName || 'User'}</div>
-                  <div className="header__mobile-user-email">{user?.email}</div>
-                </div>
               </div>
               <div className="header__mobile-user-links">
                 <Link href="/profile" className="header__mobile-user-link">

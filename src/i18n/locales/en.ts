@@ -95,4 +95,92 @@ export default {
     registerFailed: "Registration failed. Please try again.",
     unknownError: "An unknown error occurred. Please try again.",
   },
+  home: {
+    hero: {
+      title: "Buy & Sell Digital Assets In The Rocket",
+      titleHighlight: "Digital Assets In The",
+      subtitle: "Coin rocket is the easiest, safest, and fastest way to buy & sell crypto asset exchange.",
+      getStarted: "Get Started Now",
+      register: "Register"
+    },
+    tradingMarket: {
+      title: "Trading Market",
+      updateMarket: "Update Market",
+      tradeButton: "Trade",
+      chartTabs: {
+        price: "Price",
+        marketCap: "Market Cap",
+        tradeView: "Trade View"
+      },
+      chart: {
+        currentPrice: "$38.40k",
+        timeSelector: "24h",
+        pricePoints: {
+          highest: "38.70k",
+          high: "38.60k",
+          midHigh: "38.50k",
+          mid: "38.40k",
+          midLow: "38.30k",
+          low: "38.20k",
+          lowest: "38.10k"
+        },
+        dates: {
+          feb05: "05 Feb",
+          feb06: "06 Feb",
+          feb07: "07 Feb",
+          feb08: "08 Feb",
+          feb09: "09 Feb",
+          feb10: "10 Feb",
+          feb11: "11 Feb",
+          feb12: "12 Feb",
+          feb13: "13 Feb",
+          feb14: "14 Feb",
+          feb15: "15 Feb"
+        },
+        highlightBadge: "08 Feb",
+        cryptoLabel: "BTC"
+      },
+      table: {
+        number: "#",
+        name: "Name",
+        lastPrice: "Last Price",
+        dayChange: "24h %",
+        marketCap: "Market Cap",
+        lastDays: "Last 7 Days",
+        action: "Action"
+      },
+      cryptoCurrencies: {
+        bitcoin: "Bitcoin",
+        ethereum: "Ethereum",
+        binanceCoin: "Binance Coin",
+        cardano: "Cardano",
+        solana: "Solana",
+        xrp: "XRP"
+      },
+      percentages: {
+        positive: "+1.45%",
+        negative: "-5.12%",
+        positiveBinance: "+2.34%",
+        negativeCardano: "-1.23%",
+        positiveSolana: "+3.67%",
+        negativeXRP: "-0.89%"
+      },
+      prices: {
+        bitcoin: "$56,623.54",
+        ethereum: "$4,123.54",
+        binanceCoin: "$623.54",
+        cardano: "$2.14",
+        solana: "$145.23",
+        xrp: "$1.12"
+      },
+      marketCaps: {
+        bitcoin: "$880,423,640,582",
+        ethereum: "$423,640,582",
+        binanceCoin: "$104,423,640,582",
+        cardano: "$67,423,640,582",
+        solana: "$43,423,640,582",
+        xrp: "$21,423,640,582"
+      }
+    }
+  }
 };

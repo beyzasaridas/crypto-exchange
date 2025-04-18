@@ -209,23 +209,21 @@ export default function Home() {
       <div className="container">
         <div className="hero">
           <h1 className="hero__title">
-            Modern <span className="hero__title--highlight">Kripto Para</span>{" "}
-            Borsası
+            Buy & Sell <span className="hero__title--highlight">Digital Assets In The </span>{" "}
+            Rocket
           </h1>
           <p className="hero__subtitle">
-            Güvenli, hızlı ve kullanıcı dostu bir platformda kripto para alım
-            satımı yapın. En güncel fiyatları takip edin, portföyünüzü yönetin
-            ve piyasaları analiz edin.
+            Coin rocket is the easiest, safest, and fastest way to buy & sell crypto asset exchange.
           </p>
           <div className="hero__buttons">
             <a href="/market" className="hero__button hero__button--primary">
-              Piyasayı Görüntüle
+              Get Started Now
             </a>
             <a
               href="/register"
               className="hero__button hero__button--secondary"
             >
-              Hesap Oluştur
+             Register
             </a>
           </div>
         </div>

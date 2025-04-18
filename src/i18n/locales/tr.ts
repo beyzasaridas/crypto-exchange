@@ -96,4 +96,92 @@ export default {
     registerFailed: "Kayıt başarısız. Lütfen tekrar deneyin.",
     unknownError: "Bilinmeyen bir hata oluştu. Lütfen tekrar deneyin.",
   },
+  home: {
+    hero: {
+      title: "Rocket'ta Dijital Varlık Alın ve Satın",
+      titleHighlight: "Dijital Varlıkları",
+      subtitle: "Coin rocket, kripto varlık alışverişi için en kolay, en güvenli ve en hızlı yoldur.",
+      getStarted: "Hemen Başlayın",
+      register: "Kaydol"
+    },
+    tradingMarket: {
+      title: "İşlem Piyasası",
+      updateMarket: "Piyasa Güncellemeleri",
+      tradeButton: "İşlem Yap",
+      chartTabs: {
+        price: "Fiyat",
+        marketCap: "Piyasa Değeri",
+        tradeView: "İşlem Görünümü"
+      },
+      chart: {
+        currentPrice: "₺38,40b",
+        timeSelector: "24s",
+        pricePoints: {
+          highest: "38,70b",
+          high: "38,60b",
+          midHigh: "38,50b",
+          mid: "38,40b",
+          midLow: "38,30b",
+          low: "38,20b",
+          lowest: "38,10b"
+        },
+        dates: {
+          feb05: "05 Şub",
+          feb06: "06 Şub",
+          feb07: "07 Şub",
+          feb08: "08 Şub",
+          feb09: "09 Şub",
+          feb10: "10 Şub",
+          feb11: "11 Şub",
+          feb12: "12 Şub",
+          feb13: "13 Şub",
+          feb14: "14 Şub",
+          feb15: "15 Şub"
+        },
+        highlightBadge: "08 Şub",
+        cryptoLabel: "BTC"
+      },
+      table: {
+        number: "#",
+        name: "İsim",
+        lastPrice: "Son Fiyat",
+        dayChange: "24s %",
+        marketCap: "Piyasa Değeri",
+        lastDays: "Son 7 Gün",
+        action: "İşlem"
+      },
+      cryptoCurrencies: {
+        bitcoin: "Bitcoin",
+        ethereum: "Ethereum",
+        binanceCoin: "Binance Coin",
+        cardano: "Cardano",
+        solana: "Solana",
+        xrp: "XRP"
+      },
+      percentages: {
+        positive: "+%1,45",
+        negative: "-%5,12",
+        positiveBinance: "+%2,34",
+        negativeCardano: "-%1,23",
+        positiveSolana: "+%3,67",
+        negativeXRP: "-%0,89"
+      },
+      prices: {
+        bitcoin: "₺56.623,54",
+        ethereum: "₺4.123,54",
+        binanceCoin: "₺623,54",
+        cardano: "₺2,14",
+        solana: "₺145,23",
+        xrp: "₺1,12"
+      },
+      marketCaps: {
+        bitcoin: "₺880.423.640.582",
+        ethereum: "₺423.640.582",
+        binanceCoin: "₺104.423.640.582",
+        cardano: "₺67.423.640.582",
+        solana: "₺43.423.640.582",
+        xrp: "₺21.423.640.582"
+      }
+    }
+  }
 };
